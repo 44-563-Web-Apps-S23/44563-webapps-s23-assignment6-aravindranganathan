@@ -17,7 +17,6 @@
     <input type="button" onclick="convert()" value="Show conversions">
 </form>
 
-
 <p id="result">Performing conversions</p>
 
 <script> 
@@ -34,7 +33,6 @@ function convert (){
        result=Math.round(result * 10) / 10;
        toShow+= " "+amount*product+"  is "+result+";"
        product*=2; 
-        
     }      
     for(var i=amount;i<amount+5;i=i*2)
     {
@@ -43,6 +41,55 @@ function convert (){
     document.getElementById("result").innerHTML="Conversion are :"+toShow
 }
 </script>
-
+<form>
+    <input type="radio" id="avg_mean" name="operation" value="mean" checked onclick="chooseOp()">
+    <label for="avg_mean">Average</label><br> 
+    <input type="radio" id="max_val" name="operation" value="maximum" onclick="chooseOp()">
+    <label for="max_val">Max</label><br>
+    <input type="radio" id="min_val" name="operation" value="minimum" onclick="chooseOp()">
+    <label for="min_val">Min</label><br>
+   </form>
+<p id="results">Performing math operations.</p>
+<script>
+function chooseOp()
+{ var amount=parseFloat(document.getElementById("form1_amount").value)
+  var rate=parseFloat(document.getElementById("form1_rate").value)
+  var temp="";
+  console.log(amount);
+  console.log(rate);
+  temp=document.getElementsByName("operation")
+  console.log(temp)
+  var checkedValue= ""
+  for(var i=0; i<temp.length; i++)
+  { if(temp[i].checked)
+    {
+        checkedValue= temp[i].value
+    }
+  }
+  switch(checkedValue){
+    case "minimum":
+          if(amount < rate)
+               {
+                document.getElementById("results").innerHTML=" minimum of " + amount+" and " + rate+" is " +amount;
+               }
+          else{
+            document.getElementById("results").innerHTML=" minimum of " + amount+" and " + rate+" is " +rate;
+              } 
+          break;
+  case "maximum":
+          if(amount > rate)
+              {
+        document.getElementById("results").innerHTML = " maximum of " + amount+" and " + rate+" is " +amount;
+              }
+         else{
+        document.getElementById("results").innerHTML = " maximum of " + amount+" and " +rate+" is " +rate;    
+             } 
+         break;   
+  case "mean":
+        document.getElementById("results").innerHTML = " mean of " + amount +" and "+rate+" is "+(amount+rate)/2; 
+   break;
+            }
+        }            
+</script>
 </body>
 </html> 
