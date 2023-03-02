@@ -2,6 +2,12 @@
 <html>
  <head>
  <title>All about candy.</title>   
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" 
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
  </head>
 <body>
 
@@ -20,7 +26,7 @@
     <label for="form1_nick">Chewy</label>
     <input type ="checkbox" id="chewy" name="form1_nick" value="False"> <br>
     </div>
-    <input type="button" onClick="selectBox()" value="Select a box">
+    <input type="button" class="btn btn-primary" onClick="selectBox()" value="Select a box">
 </form>
 
 <p id="result">This text will be replaced </p>
@@ -34,7 +40,7 @@
    <label for="form_price">Enter the price</label>    
    <input type="text" id="form_price" name="form1_nick" value=""><br>
    </div>
-   <input type="button" onClick="updateBox()" value="Update a box">
+   <input type="button" class="btn btn-primary" onClick="updateBox()" value="Update a box">
 </form>
 <p>This text will be replaced</p>
 
