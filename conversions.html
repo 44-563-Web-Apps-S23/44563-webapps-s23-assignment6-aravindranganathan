@@ -4,8 +4,7 @@
  <title>Performing Currency Conversions</title>   
  </head>
 <body>
-<h1>Aravind Ranganathan shows currency conversions</h1>
-<h2>Getting input</h2>
+<h2>Aravind Ranganathan shows currency conversions</h2>
 
 <form>
     <label for="form1_amount">Enter base amount</label>
@@ -41,6 +40,7 @@ function convert (){
     document.getElementById("result").innerHTML="Conversion are :"+toShow
 }
 </script>
+<div class="container-fluid">
 <form>
     <input type="radio" id="avg_mean" name="operation" value="mean" checked onclick="chooseOp()">
     <label for="avg_mean">Average</label><br> 
@@ -49,6 +49,7 @@ function convert (){
     <input type="radio" id="min_val" name="operation" value="minimum" onclick="chooseOp()">
     <label for="min_val">Min</label><br>
    </form>
+  </div> 
 <p id="results">Performing math operations.</p>
 <script>
 function chooseOp()
